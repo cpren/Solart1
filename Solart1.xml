@@ -1,1 +1,29 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="controls_whileUntil" id="34" inline="false" x="22" y="68">
+    <field name="MODE">WHILE</field>
+    <value name="NUMBER">
+      <block type="math_number" id="41">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <statement name="DO">
+      <block type="oled_drawnumber" id="9" inline="true">
+        <value name="NUMBER">
+          <block type="math_arithmetic" id="19" inline="true">
+            <field name="OP">MINUS</field>
+            <value name="A">
+              <block type="sensor_light" id="26">
+                <field name="LIGHT">LEFT</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="sensor_light" id="27">
+                <field name="LIGHT">RIGHT</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+  </block>
+</xml>
